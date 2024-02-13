@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HAPPY VALENTINE'S DAY, LOREN KO</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #e74c3c;
+      text-align: center;
+    }
+    h2 {
+      color: #e74c3c;
+      text-align: center;
+    }
+    p {
+      color: #34495e;
+      line-height: 1.6;
+    }
+    #countdown {
+      text-align: center;
+      color: #e74c3c;
+      font-size: 20px;
+      margin-top: 20px;
+      display: none; /* Hide countdown initially */
+    }
+  </style>
+</head>
+<body>
+
+<div id="mainContent" class="container" style="display: none;"> <!-- Hide main content initially -->
+  <h1> happy valentine's day, loren ko.</h1>
+  <h2>my dearest valentine,</h2>
+  <p>I just wanted to take a moment on this special day to show my affection for you. You mean everything to me, and I am glad every day for having you in my life.</p>
+  <p>Your love makes my heart happy, and I treasure every time we spend together. You are my courage, support, and inspiration.</p>
+  <p>On this Valentine's Day, I'd like you to know that my love for you grows stronger with each passing day. You are the love of my life, and I will be eternally grateful for your affection.</p>
+  <p>Here's to spending many more Valentine's Days together, making wonderful memories and celebrating our love. I adore you more than words can say.</p>
+  <p>With sincere affection,</p>
+  <p>enzo :3 <img src="sayo nlg ak pls.jpg"> <p>
+    <audio controls>
+        <img src="sayo nlg ak pls.jpg">
+            <source src="everything - black skirts.mp3" type="audio/mp3">
+            <audio>
+</div>
+
+<div id="countdown"></div>
+
+<script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("Feb 14, 2024 00:00:00").getTime();
+
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+
+    // Get the current date and time
+    var now = new Date().getTime();
+
+    // Calculate the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // If the count down is finished, display main content and hide countdown
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("countdown").innerHTML = "Happy Valentine's Day!";
+      document.getElementById("mainContent").style.display = "block";
+      document.getElementById("countdown").style.display = "none";
+    } else {
+      // Calculate days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the result in the element with id="countdown"
+      document.getElementById("countdown").innerHTML = "Valentine's Day Countdown: " + days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+      
+      // Show the countdown and hide the main content
+      document.getElementById("countdown").style.display = "block";
+      document.getElementById("mainContent").style.display = "none";
+    }
+  }, 1000);
+</script>
+
+</body>
+</html>
